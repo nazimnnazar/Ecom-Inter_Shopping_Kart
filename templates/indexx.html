@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+<!DOCTYPE html>
+
+<html lang="en">
+    <body id="page-top">
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Welcome To Our Studio!</div>
+                <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+                <!-- <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a> -->
+            </div>
+        </header>
+        <div class="dropdown">
+            <div class="navbar">
+           
+                <button class="dropbtn">Dropdown 
+                 <i class="fa fa-caret-down"></i>
+                  </button>
+             <div class="dropdown-content">
+                   <a href="/">Link 1</a>
+                   
+                 </div>
+               </div> 
+        </div>
+        
+        </div>
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Portfolio</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+
+         
+
+                <div class="row">
+                    
+
+                    {% for i in pr %}
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <a class="imgover" href="{{i.get_url}}">
+                                <img class="img-fluid" src="" alt="..." /></a>
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-subheading text-muted"></div>
+                                <div class="portfolio-caption-heading">&#8377;{{i.price}}</div>
+                                <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                    Add Cart
+                                  </button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                  
+                </div>
+            </div>
+        </section>
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2022</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
+{% endblock %}
