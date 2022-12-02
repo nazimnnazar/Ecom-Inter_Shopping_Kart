@@ -4,6 +4,7 @@ Implements the functioning of an Ecommerce Website that performs various functio
 
 
 ## 🚀  Future Features
+
 ### .Building an Django  Framework 
 ### .Real-time Search
 ### .Product attributes
